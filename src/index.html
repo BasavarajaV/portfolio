@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="Basavaraja is a Backend Developer with 4+ years of experience in Node.js, Express, JavaScript, and MongoDB, specializing in scalable solutions for Entertainment, CRM, and e-commerce. Proven expertise in high-performance applications, API optimization, and complex data workflows.">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      <!-- Alpine.js - Load first -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      
+      <!-- Font Links -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <title>Basavaraja - Backend Developer | Node.js, Express, MongoDB, Microservices</title>
+      <!-- SEO Description -->
+      <meta name="description" content="Basavaraja is a Backend Developer with 4+ years of experience in Node.js, Express, JavaScript, and MongoDB, specializing in scalable solutions for Entertainment, CRM, and e-commerce. Proven expertise in high-performance applications, API optimization, and complex data workflows.">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Core CSS and Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      
+      <!-- Project-specific styles -->
+      <style>
+        /* Base styles */
+        :root {
+          --primary-color: #000000;
+          --secondary-color: #000000;
+          --accent-color: ;
+        }
+
+        /* Strict no-scrollbar rules */
+        * {
+          -ms-overflow-style: none !important;  /* IE and Edge */
+          scrollbar-width: none !important;     /* Firefox */
+        }
+        *::-webkit-scrollbar {
+          display: none !important;             /* Chrome, Safari and Opera */
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Sora, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Inter, Inter, system-ui, sans-serif;
+        }
+
+        /* Interactive elements */
+        .interactive-element {
+          transition: all 0.3s ease;
+        }
+        .interactive-element:hover {
+          transform: translateY(-2px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .fade-in {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+      </style>
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="Basavaraja - Software Engineer">
+      
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="">
+
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Project Configuration -->
+      <script>
+        window.projectConfig = {
+          name: 'Basavaraja - Software Engineer',
+          type: '',
+          settings: {
+            colors: {
+              primary: '#000000',
+              secondary: '#000000',
+              accent: ''
+            },
+            fonts: {
+              primary: 'Sora',
+              secondary: 'Inter'
+            }
+          }
+        };
+      </script>
+   <style>
+        [data-section-id] {
+          display: none;
+        }
+        [data-section-id]:first-child {
+          display: block;
+        }
+      </style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <mountpoint><div id="RolloutPageContent"><nav id="header" class="bg-black text-white p-4 fixed w-full z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-green-400">Basavaraja</a>
+        <div class="hidden md:flex space-x-6">
+            <a href="#skills" class="hover:text-green-400 transition duration-300">Skills</a>
+            <a href="#experience" class="hover:text-green-400 transition duration-300">Experience</a>
+            <a href="#projects" class="hover:text-green-400 transition duration-300">Projects</a>
+            <a href="#education" class="hover:text-green-400 transition duration-300">Education</a>
+            <a href="#contact" class="hover:text-green-400 transition duration-300">Contact</a>
+        </div>
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black mt-2">
+        <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-800">Skills</a>
+        <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-800">Experience</a>
+        <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-800">Projects</a>
+        <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-800">Education</a>
+        <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-800">Contact</a>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu after clicking a link
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    });
+</script>
+<section id="hero" class="relative bg-black text-white h-screen flex items-center justify-center overflow-hidden pt-16">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1701170645257-8345722edf47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bWluaW1hbGlzdCUyNTIwdGVjaCUyNTIwYmFja2dyb3VuZHxlbnwxfDB8fHwxNzUyNzY5MTQzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Minimalist tech background with 2024" class="w-full h-full object-cover opacity-30">
+    </div>
+    <div class="relative z-10 text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-green-400 mb-4 animate-fade-in-up">Basavaraja</h1>
+        <p class="text-2xl md:text-4xl font-semibold text-gray-200 mb-6 animate-fade-in-up animation-delay-200">Software Engineer (Backend Developer)</p>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 animate-fade-in-up animation-delay-400">
+            4+ years of experience in Node.js, Express, JavaScript, and MongoDB.
+            Delivering scalable solutions across Entertainment, CRM, and e-commerce.
+        </p>
+        <a href="#contact" class="inline-block bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 animate-fade-in-up animation-delay-600">
+            Get in Touch
+        </a>
+    </div>
+</section>
+<section id="skills" class="bg-black text-white py-16 px-4">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-green-400 mb-12">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1641945511908-4a2ef922b2a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bWluaW1hbCUyNTIwdGVjaCUyNTIwaWNvbnN8ZW58MXwwfHx8MTc1Mjg2MDgxMHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Node.js icon" class="w-16 h-16 mb-4 object-cover rounded-full">
+                <p class="text-xl font-semibold text-gray-100">Node.js</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1685599504130-9ee12eef06eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8bWluaW1hbCUyNTIwdGVjaCUyNTIwaWNvbnN8ZW58MXwwfHx8MTc1Mjg2MDgxMHww&ixlib=rb-4.1.0&q=80&w=1080" alt="MongoDB icon" class="w-16 h-16 mb-4 object-cover rounded-full">
+                <p class="text-xl font-semibold text-gray-100">MongoDB</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1523350703530-161b46e28e24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8bWluaW1hbCUyNTIwdGVjaCUyNTIwaWNvbnN8ZW58MXwwfHx8MTc1Mjg2MDgxMHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Docker icon" class="w-16 h-16 mb-4 object-cover rounded-full">
+                <p class="text-xl font-semibold text-gray-100">Docker</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-green-700 rounded-full">
+                    <span class="text-3xl font-bold">E</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">Express</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-orange-500 rounded-full">
+                    <span class="text-3xl font-bold">AWS</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">AWS - S3, EC2</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-blue-600 rounded-full">
+                    <span class="text-3xl font-bold">TS</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">Typescript</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-red-600 rounded-full">
+                    <span class="text-3xl font-bold">R</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">Redis</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-green-500 rounded-full">
+                    <span class="text-3xl font-bold">V</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">VueJs</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-orange-700 rounded-full">
+                    <span class="text-3xl font-bold">MQ</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">RabbitMQ</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-blue-800 rounded-full">
+                    <span class="text-3xl font-bold">K8s</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">Kubernetes Lens</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-purple-700 rounded-full">
+                    <span class="text-3xl font-bold">MS</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">Microservices</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-gray-900 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center bg-teal-600 rounded-full">
+                    <span class="text-3xl font-bold">ES</span>
+                </div>
+                <p class="text-xl font-semibold text-gray-100">Elasticsearch</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="experience" class="bg-gray-900 text-white py-16 px-4">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-green-400 text-center mb-12">Experience</h2>
+
+        <!-- IT Experience -->
+        <div class="mb-16">
+            <h3 class="text-3xl font-semibold text-gray-100 mb-8 text-center">IT Experience</h3>
+            <div class="space-y-10">
+                <!-- Panasonic Life Solutions -->
+                <div class="flex flex-col md:flex-row items-start bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:pr-8 text-center md:text-left">
+                        <img src="https://images.unsplash.com/photo-1727988358526-6d30b369450a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8YmFja2VuZCUyNTIwZGV2ZWxvcG1lbnQlMjUyMGVudmlyb25tZW50fGVufDF8MHx8fDE3NTI4NjA4MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Panasonic Logo" class="w-24 h-24 object-cover rounded-full mx-auto md:mx-0 mb-4">
+                        <h4 class="text-xl font-bold text-green-400">Panasonic Life Solutions</h4>
+                        <p class="text-gray-400">Bengaluru</p>
+                        <p class="text-gray-400">Jan 2025 - Present</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h4 class="text-2xl font-semibold text-gray-200 mb-4">Backend Developer</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Maintained and enhanced User Management Service, ensuring compatibility with evolving Identity Provider (IDP) versions.</li>
+                            <li>Configured new machines and defined machine types based on customer specifications and key performance indicators (KPIs).</li>
+                            <li>Developed automation scripts for database migrations and schema updates to support new feature rollouts.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Route Mobile -->
+                <div class="flex flex-col md:flex-row items-start bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:pr-8 text-center md:text-left">
+                        <img src="https://images.unsplash.com/photo-1727988358508-c0ab923f204a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8YmFja2VuZCUyNTIwZGV2ZWxvcG1lbnQlMjUyMGVudmlyb25tZW50fGVufDF8MHx8fDE3NTI4NjA4MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Route Mobile Logo" class="w-24 h-24 object-cover rounded-full mx-auto md:mx-0 mb-4">
+                        <h4 class="text-xl font-bold text-green-400">Route Mobile Pvt Ltd</h4>
+                        <p class="text-gray-400">Bengaluru</p>
+                        <p class="text-gray-400">Jan 2023 - Jan 2025</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h4 class="text-2xl font-semibold text-gray-200 mb-4">Software Developer</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Upgrading PHP code to Node.js to enhance scalability.</li>
+                            <li>Developing new scripts for the notification service.</li>
+                            <li>Troubleshooting production bugs related to legacy Node.js code.</li>
+                            <li>Designing a queuing mechanism to ensure effective communication between internal services.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Triofi Technologies -->
+                <div class="flex flex-col md:flex-row items-start bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:pr-8 text-center md:text-left">
+                        <img src="https://images.unsplash.com/photo-1605116900847-77c07153a083?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8YmFja2VuZCUyNTIwZGV2ZWxvcG1lbnQlMjUyMGVudmlyb25tZW50fGVufDF8MHx8fDE3NTI4NjA4MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Triofi Logo" class="w-24 h-24 object-cover rounded-full mx-auto md:mx-0 mb-4">
+                        <h4 class="text-xl font-bold text-green-400">Triofi Technologies</h4>
+                        <p class="text-gray-400">Bengaluru</p>
+                        <p class="text-gray-400">Jan 2021 - Dec 2022</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h4 class="text-2xl font-semibold text-gray-200 mb-4">Software Developer</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Working as Backend developer.</li>
+                            <li>Responsible for API creation and integration.</li>
+                            <li>Guiding juniors/new hires regarding the logic implementation.</li>
+                            <li>Deployment to server using pm2, docker.</li>
+                            <li>Interacting with clients.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-IT Experience -->
+        <div>
+            <h3 class="text-3xl font-semibold text-gray-100 mb-8 text-center">Non-IT Experience</h3>
+            <div class="space-y-10">
+                <!-- Indo Mim Tech Pvt Ltd -->
+                <div class="flex flex-col md:flex-row items-start bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:pr-8 text-center md:text-left">
+                        <div class="w-24 h-24 mb-4 mx-auto md:mx-0 flex items-center justify-center bg-gray-800 rounded-full text-green-400 text-4xl font-bold">IM</div>
+                        <h4 class="text-xl font-bold text-green-400">Indo Mim Tech Pvt Ltd</h4>
+                        <p class="text-gray-400">Bengaluru</p>
+                        <p class="text-gray-400">June 2019 - June 2020</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h4 class="text-2xl font-semibold text-gray-200 mb-4">Specialist in Quality</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Drafting of given components.</li>
+                            <li>Designing gauges to the components.</li>
+                            <li>Validating manufactured gauges.</li>
+                            <li>Reworking and Updating of existing model.</li>
+                            <li>Generating the 2D Manufacturing drawings.</li>
+                            <li>Taking care of all Drawing release activities and maintaining all the documents.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- APM Technologies -->
+                <div class="flex flex-col md:flex-row items-start bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:pr-8 text-center md:text-left">
+                        <div class="w-24 h-24 mb-4 mx-auto md:mx-0 flex items-center justify-center bg-gray-800 rounded-full text-green-400 text-4xl font-bold">APM</div>
+                        <h4 class="text-xl font-bold text-green-400">APM Technologies</h4>
+                        <p class="text-gray-400">Bengaluru</p>
+                        <p class="text-gray-400">June 2017 - June 2019</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h4 class="text-2xl font-semibold text-gray-200 mb-4">Quality Engineer</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Drafting and Modeling of Automobile parts.</li>
+                            <li>Reworking and Updating of existing model.</li>
+                            <li>Generating the 2D Manufacturing drawings.</li>
+                            <li>Taking care of all Drawing release activities and maintaining all the documents.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Accurate Engineering Pvt Ltd -->
+                <div class="flex flex-col md:flex-row items-start bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:pr-8 text-center md:text-left">
+                        <div class="w-24 h-24 mb-4 mx-auto md:mx-0 flex items-center justify-center bg-gray-800 rounded-full text-green-400 text-4xl font-bold">AE</div>
+                        <h4 class="text-xl font-bold text-green-400">Accurate Engineering Pvt Ltd</h4>
+                        <p class="text-gray-400">Bengaluru</p>
+                        <p class="text-gray-400">Apr 2016 - June 2017</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h4 class="text-2xl font-semibold text-gray-200 mb-4">Quality Engineer Trainee</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Making CMM program as per drawing (2D and GD&T dimensions).</li>
+                            <li>Validating program with trials.</li>
+                            <li>Implementing inspection activities.</li>
+                            <li>Calibration of gauges by applying GD&T.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="projects" class="bg-black text-white py-16 px-4">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-green-400 text-center mb-12">Projects</h2>
+
+        <!-- Current Project -->
+        <div class="mb-16">
+            <h3 class="text-3xl font-semibold text-gray-100 mb-8 text-center">Current Project</h3>
+            <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30 flex flex-col md:flex-row items-center md:items-start">
+                <img src="https://images.unsplash.com/photo-1701170645257-8345722edf47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8YmFja2VuZCUyNTIwY29kZSUyNTIwaW50ZXJmYWNlfGVufDF8MHx8fDE3NTI4NjA4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="MirAi Pro Factory" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                <div>
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">MirAi Pro Factory</h4>
+                    <p class="text-gray-300 mb-4">Panasonic Life Solutions</p>
+                    <p class="text-gray-400 mb-4">
+                        An innovative Industrial IoT Platform utilizing IoT, analytics, and mobile applications for improved production efficiency, quality control, issue identification, and reduced downtime.
+                    </p>
+                    <a href="https://iic.in.panasonic.com/single-blog/panasonics-miraie-profactory" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline mb-4 block">Website Link</a>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Maintained and enhanced User Management Service, ensuring compatibility with evolving Identity Provider (IDP) versions.</li>
+                        <li>Customized backend services to meet dynamic customer requirements and business needs.</li>
+                        <li>Configured new machines and defined machine types based on customer specifications and key performance indicators (KPIs).</li>
+                        <li>Optimized backend performance by minimizing API and WebSocket calls from the frontend.</li>
+                        <li>Developed automation scripts for database migrations and schema updates to support new feature rollouts.</li>
+                        <li>Monitored and responded to production crashes, performing root cause analysis and delivering timely fixes.</li>
+                        <li>Collaborated closely with frontend developers to support integration and versioning of newly developed or updated APIs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Projects -->
+        <div>
+            <h3 class="text-3xl font-semibold text-gray-100 mb-8 text-center">Other Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sendclean -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <img src="https://images.unsplash.com/photo-1584188335984-7781d3194e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8YmFja2VuZCUyNTIwY29kZSUyNTIwaW50ZXJmYWNlfGVufDF8MHx8fDE3NTI4NjA4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Sendclean" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">Sendclean</h4>
+                    <p class="text-gray-300 mb-4">Route Mobile</p>
+                    <p class="text-gray-400 mb-4">
+                        Email marketing platform for sending promotional and transactional emails to millions. Features include contact list uploads and campaign scheduling.
+                    </p>
+                    <a href="https://sendclean.com" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline mb-4 block">Website Link</a>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Developed scripts to automate daily dispatch of campaign reports.</li>
+                        <li>Revised existing scripts for enhanced error handling and monitoring.</li>
+                        <li>Optimized performance by dividing scripts into multiple components.</li>
+                        <li>Implemented new logger system based on Elasticsearch.</li>
+                        <li>Developed seamless dumping process from MongoDB to Elasticsearch for recipient profiling.</li>
+                        <li>Designed and implemented supporting processes in a parent-child architecture with cron setup.</li>
+                    </ul>
+                </div>
+
+                <!-- Traceability Software -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <img src="https://images.unsplash.com/photo-1735293720962-3afd41492064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8YmFja2VuZCUyNTIwY29kZSUyNTIwaW50ZXJmYWNlfGVufDF8MHx8fDE3NTI4NjA4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Traceability Software" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">Traceability Software</h4>
+                    <p class="text-gray-300 mb-4">Triofi Technologies (Client: Tata Elxsi)</p>
+                    <p class="text-gray-400 mb-4">
+                        Application to trace mechanical parts through production, featuring 7-8 microservices, 10 validation rules, and smart sampling.
+                    </p>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Developed core processing logic for end-to-end workflow.</li>
+                        <li>Automated complex reporting, replacing manual Excel-based solutions.</li>
+                        <li>Built and deployed all microservices to production.</li>
+                        <li>Debugged and resolved production issues.</li>
+                        <li>Collaborated with management on project requirements.</li>
+                        <li>Refactored and optimized processing logic.</li>
+                        <li>Implemented bulk processing APIs.</li>
+                    </ul>
+                </div>
+
+                <!-- Bonus Round -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="w-full h-48 bg-gray-800 rounded-lg mb-6 flex items-center justify-center text-green-400 text-6xl font-bold">BR</div>
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">Bonus Round</h4>
+                    <p class="text-gray-300 mb-4">Triofi Technologies</p>
+                    <p class="text-gray-400 mb-4">
+                        Web and Android application for on-demand streaming of Canada's Game Shows, similar to Netflix, with an Admin Panel for content management.
+                    </p>
+                    <a href="https://bonusround.ca/" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline mb-4 block">Website Link</a>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Developed APIs for video upload/deletion on Bunny CDN.</li>
+                        <li>Implemented APIs to populate users' watched time data.</li>
+                        <li>Modified API response formats for Android app compatibility.</li>
+                        <li>Developed feature based on device's MAC ID for single-screen experience.</li>
+                        <li>Modified APIs to dynamically populate latest videos and seasons.</li>
+                        <li>Integrated video iFrame functionality for tracking watching events.</li>
+                        <li>Implemented Mailgun integration for newsletters and welcome mails.</li>
+                    </ul>
+                </div>
+
+                <!-- CRM Software -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="w-full h-48 bg-gray-800 rounded-lg mb-6 flex items-center justify-center text-green-400 text-6xl font-bold">CRM</div>
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">CRM Software</h4>
+                    <p class="text-gray-300 mb-4">Triofi Technologies</p>
+                    <p class="text-gray-400 mb-4">
+                        Comprehensive internal CRM with a monorepo approach, structured as microservices, covering project, employee, finance, and time off management.
+                    </p>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Pioneered monorepo concept and folder structure.</li>
+                        <li>Modularized authentication and MongoDB connections as distinct packages.</li>
+                        <li>Assumed role of repository maintainer, enforcing code quality.</li>
+                        <li>Spearheaded implementation of project management features.</li>
+                        <li>Introduced Husky to enforce code quality standards.</li>
+                        <li>Provided guidance on schema architecture and API requirements.</li>
+                    </ul>
+                </div>
+
+                <!-- Make Many Robots -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="w-full h-48 bg-gray-800 rounded-lg mb-6 flex items-center justify-center text-green-400 text-6xl font-bold">MMR</div>
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">Make Many Robots</h4>
+                    <p class="text-gray-300 mb-4">Triofi Technologies</p>
+                    <p class="text-gray-400 mb-4">
+                        Online DIY-Learn Robotics program for children aged 8-16, providing instructional videos and an admin panel for content configuration.
+                    </p>
+                    <a href="https://courses.makemanyrobots.com/" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline mb-4 block">Website Link</a>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Developed APIs for complete lifecycle of blogs (CRUD).</li>
+                        <li>Implemented APIs to efficiently manage courses.</li>
+                        <li>Developed APIs for content upload and streaming via Bunny CDN.</li>
+                        <li>Configured Bunny CDN through their portal for production.</li>
+                        <li>Hosted website on AWS EC2 with MongoDB, utilizing PM2.</li>
+                        <li>Actively engaged with clients to implement desired features.</li>
+                    </ul>
+                </div>
+
+                <!-- Industrial Data Monitoring System -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30">
+                    <div class="w-full h-48 bg-gray-800 rounded-lg mb-6 flex items-center justify-center text-green-400 text-6xl font-bold">IDMS</div>
+                    <h4 class="text-2xl font-bold text-green-400 mb-2">Industrial Data Monitoring System</h4>
+                    <p class="text-gray-300 mb-4">Triofi Technologies</p>
+                    <p class="text-gray-400 mb-4">
+                        Application for visualizing plant and machine information, live data, and real-time statuses, with a customized reporting service.
+                    </p>
+                    <h5 class="text-xl font-semibold text-gray-200 mb-2">Responsibilities:</h5>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>Analyzed schema of machine-generated data.</li>
+                        <li>Designed and planned visualization pages.</li>
+                        <li>Defined API methods and data flow rules.</li>
+                        <li>Optimized queries for API performance.</li>
+                        <li>Performed collection aggregation for insights.</li>
+                        <li>Integrated graphical and tabular data representations.</li>
+                        <li>Implemented dynamic search functionality.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="education" class="bg-gray-900 text-white py-16 px-4">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-green-400 mb-12">Education</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- B.E Mechanical -->
+            <div class="bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30 flex flex-col items-center">
+                <img src="https://images.unsplash.com/photo-1701170645257-8345722edf47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bWluaW1hbGlzdCUyNTIwZ3JhZHVhdGlvbiUyNTIwY2FwfGVufDF8MHx8fDE3NTI4NjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Graduation Cap" class="w-24 h-24 object-cover rounded-full mb-4">
+                <h3 class="text-2xl font-semibold text-gray-100 mb-2">B.E Mechanical</h3>
+                <p class="text-green-400 text-lg mb-2">8.58 CGPA</p>
+                <p class="text-gray-300 mb-2">Basaveshwara Engg. College, Bagalkote</p>
+                <p class="text-gray-400">2011 - 2015</p>
+            </div>
+
+            <!-- PUC -->
+            <div class="bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30 flex flex-col items-center">
+                <img src="https://images.unsplash.com/photo-1659080908120-ee0a52629e86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyNTIwZ3JhZHVhdGlvbiUyNTIwY2FwfGVufDF8MHx8fDE3NTI4NjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Book Icon" class="w-24 h-24 object-cover rounded-full mb-4">
+                <h3 class="text-2xl font-semibold text-gray-100 mb-2">PUC</h3>
+                <p class="text-green-400 text-lg mb-2">70.5 %</p>
+                <p class="text-gray-300 mb-2">Vijayanagar College, Hospete</p>
+                <p class="text-gray-400">2009 - 2011</p>
+            </div>
+
+            <!-- SSLC -->
+            <div class="bg-black p-8 rounded-lg shadow-xl transition duration-300 hover:shadow-green-500/30 flex flex-col items-center">
+                <img src="https://images.unsplash.com/photo-1638281269990-8fbe0db9375e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8bWluaW1hbGlzdCUyNTIwZ3JhZHVhdGlvbiUyNTIwY2FwfGVufDF8MHx8fDE3NTI4NjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Certificate Icon" class="w-24 h-24 object-cover rounded-full mb-4">
+                <h3 class="text-2xl font-semibold text-gray-100 mb-2">SSLC</h3>
+                <p class="text-green-400 text-lg mb-2">75.68 %</p>
+                <p class="text-gray-300 mb-2">Vijayanagar College, Munirabad</p>
+                <p class="text-gray-400">2009</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="bg-black text-white py-16 px-4">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-green-400 mb-12">Contact Me</h2>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 mb-12">
+            <div class="flex flex-col items-center bg-gray-900 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1623041997614-064bb5b95af6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bWluaW1hbGlzdCUyNTIwdGVjaCUyNTIwY29ubmVjdGlvbnxlbnwxfDB8fHwxNzUyODYwODY0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Email icon" class="w-16 h-16 mb-4 object-cover rounded-full">
+                <p class="text-lg font-semibold text-gray-100">Email</p>
+                <a href="mailto:basavaraja.v.kumbar@gmail.com" class="text-green-400 hover:underline">basavaraja.v.kumbar@gmail.com</a>
+            </div>
+            <div class="flex flex-col items-center bg-gray-900 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1638734255280-8bae834f8297?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyNTIwdGVjaCUyNTIwY29ubmVjdGlvbnxlbnwxfDB8fHwxNzUyODYwODY0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Phone icon" class="w-16 h-16 mb-4 object-cover rounded-full">
+                <p class="text-lg font-semibold text-gray-100">Phone</p>
+                <a href="tel:+918050881096" class="text-green-400 hover:underline">+91 8050881096</a>
+            </div>
+            <div class="flex flex-col items-center bg-gray-900 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1698934688661-522c99f4c98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8bWluaW1hbGlzdCUyNTIwdGVjaCUyNTIwY29ubmVjdGlvbnxlbnwxfDB8fHwxNzUyODYwODY0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Location icon" class="w-16 h-16 mb-4 object-cover rounded-full">
+                <p class="text-lg font-semibold text-gray-100">Location</p>
+                <p class="text-gray-300">Marathalli, Bengaluru</p>
+            </div>
+        </div>
+
+        <div class="max-w-lg mx-auto bg-gray-900 p-8 rounded-lg shadow-xl">
+            <h3 class="text-2xl font-semibold text-gray-100 mb-6">Send a Message</h3>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" required>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" required>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-12">
+            <h3 class="text-2xl font-semibold text-gray-100 mb-6">Connect with me</h3>
+            <a href="https://github.com/BasavarajaV" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                GitHub Profile
+            </a>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="bg-gray-900 text-white py-8 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-2xl font-bold text-green-400">Basavaraja</h3>
+            <p class="text-gray-400">Software Engineer (Backend Developer)</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 mb-4 md:mb-0">
+            <a href="#skills" class="hover:text-green-400 transition duration-300">Skills</a>
+            <a href="#experience" class="hover:text-green-400 transition duration-300">Experience</a>
+            <a href="#projects" class="hover:text-green-400 transition duration-300">Projects</a>
+            <a href="#education" class="hover:text-green-400 transition duration-300">Education</a>
+            <a href="#contact" class="hover:text-green-400 transition duration-300">Contact</a>
+        </div>
+
+        <div class="flex space-x-4">
+            <a href="mailto:basavaraja.v.kumbar@gmail.com" class="text-gray-400 hover:text-green-400 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1633115764265-6fb35f0654d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bWluaW1hbCUyNTIwY29udGFjdCUyNTIwaWNvbnN8ZW58MXwwfHx8MTc1Mjg2MDg3NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Email" class="w-8 h-8 rounded-full object-cover">
+            </a>
+            <a href="https://github.com/BasavarajaV" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-green-400 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1685599504130-9ee12eef06eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8bWluaW1hbCUyNTIwY29udGFjdCUyNTIwaWNvbnN8ZW58MXwwfHx8MTc1Mjg2MDg3NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="GitHub" class="w-8 h-8 rounded-full object-cover">
+            </a>
+            <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1701170645257-8345722edf47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8bWluaW1hbCUyNTIwY29udGFjdCUyNTIwaWNvbnN8ZW58MXwwfHx8MTc1Mjg2MDg3NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="LinkedIn" class="w-8 h-8 rounded-full object-cover">
+            </a>
+        </div>
+    </div>
+    <div class="mt-8 text-center text-gray-500 text-sm">
+        &copy; 2024 Basavaraja. All rights reserved.
+    </div>
+</footer></div></mountpoint>
+      </main>
+
+      <!-- Core functionality scripts -->
+      <script>
+        // Initialize interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+          // Add interactive behaviors
+          const interactiveElements = document.querySelectorAll('.interactive-element');
+          interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+              element.classList.add('hover');
+            });
+            element.addEventListener('mouseleave', () => {
+              element.classList.remove('hover');
+            });
+          });
+
+          // Initialize any dynamic content
+          const dynamicContent = document.querySelectorAll('[data-dynamic]');
+          dynamicContent.forEach(content => {
+            // Add fade-in animation
+            content.classList.add('fade-in');
+          });
+        });
+
+        // Handle navigation
+        function handleNavigation(event) {
+          const link = event.currentTarget;
+          if (link.hasAttribute('data-nav')) {
+            event.preventDefault();
+            const target = link.getAttribute('data-nav');
+            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        // Initialize navigation
+        document.querySelectorAll('[data-nav]').forEach(link => {
+          link.addEventListener('click', handleNavigation);
+        });
+      </script>
+
+      <!-- Body Scripts -->
+      <script id="body-scripts">
+        // This script tag will be replaced with actual scripts.body content
+        if (window.scripts && window.scripts.body) {
+          document.getElementById('body-scripts').outerHTML = window.scripts.body;
+        }
+      </script>
+   </body>
+</html>
