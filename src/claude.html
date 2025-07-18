@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basavaraja - Backend Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            margin: 2rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-left: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .experience-company {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .experience-date {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .experience-description {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .experience-description ul {
+            margin-left: 1.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-company {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #5a6fd8;
+        }
+
+        .project-responsibilities {
+            margin-top: 1.5rem;
+        }
+
+        .project-responsibilities h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .project-responsibilities ul {
+            margin-left: 1.5rem;
+        }
+
+        .project-responsibilities li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 1rem;
+            color: #667eea;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .experience-timeline {
+                padding-left: 1rem;
+            }
+
+            .experience-item {
+                margin-left: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Basavaraja</a>
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Basavaraja</h1>
+            <p class="subtitle">Software Engineer (Backend Developer)</p>
+            <p class="description">4+ years of experience in Node.js, Express, JavaScript, and MongoDB. Delivering scalable solutions across Entertainment, CRM, and e-commerce.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="main-content">
+            <section id="skills" class="section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">Node.js</div>
+                    <div class="skill-card">MongoDB</div>
+                    <div class="skill-card">Docker</div>
+                    <div class="skill-card">Express</div>
+                    <div class="skill-card">AWS - S3, EC2</div>
+                    <div class="skill-card">TypeScript</div>
+                    <div class="skill-card">Redis</div>
+                    <div class="skill-card">VueJs</div>
+                    <div class="skill-card">RabbitMQ</div>
+                    <div class="skill-card">Kubernetes Lens</div>
+                    <div class="skill-card">Microservices</div>
+                    <div class="skill-card">Elasticsearch</div>
+                </div>
+            </section>
+
+            <section id="experience" class="section">
+                <h2>Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Backend Developer</div>
+                                <div class="experience-company">Panasonic Life Solutions, Bengaluru</div>
+                            </div>
+                            <div class="experience-date">Jan 2025 - Present</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Maintained and enhanced User Management Service, ensuring compatibility with evolving Identity Provider (IDP) versions</li>
+                                <li>Configured new machines and defined machine types based on customer specifications and KPIs</li>
+                                <li>Developed automation scripts for database migrations and schema updates to support new feature rollouts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Software Developer</div>
+                                <div class="experience-company">Route Mobile Pvt Ltd, Bengaluru</div>
+                            </div>
+                            <div class="experience-date">Jan 2023 - Jan 2025</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Upgrading PHP code to Node.js to enhance scalability</li>
+                                <li>Developing new scripts for the notification service</li>
+                                <li>Troubleshooting production bugs related to legacy Node.js code</li>
+                                <li>Designing a queuing mechanism to ensure effective communication between internal services</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Software Developer</div>
+                                <div class="experience-company">Triofi Technologies, Bengaluru</div>
+                            </div>
+                            <div class="experience-date">Jan 2021 - Dec 2022</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Working as Backend developer</li>
+                                <li>Responsible for API creation and integration</li>
+                                <li>Guiding juniors/new hires regarding the logic implementation</li>
+                                <li>Deployment to server using pm2, docker</li>
+                                <li>Interacting with clients</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">MirAi Pro Factory</div>
+                            <div class="project-company">Panasonic Life Solutions</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                An innovative Industrial IoT Platform utilizing IoT, analytics, and mobile applications for improved production efficiency, quality control, issue identification, and reduced downtime.
+                            </div>
+                            <a href="https://iic.in.panasonic.com/single-blog/panasonics-miraie-profactory" class="project-link" target="_blank">View Project</a>
+                            <div class="project-responsibilities">
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Maintained and enhanced User Management Service</li>
+                                    <li>Customized backend services to meet dynamic customer requirements</li>
+                                    <li>Configured new machines and defined machine types</li>
+                                    <li>Optimized backend performance by minimizing API calls</li>
+                                    <li>Developed automation scripts for database migrations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Sendclean</div>
+                            <div class="project-company">Route Mobile</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                Email marketing platform for sending promotional and transactional emails to millions. Features include contact list uploads and campaign scheduling.
+                            </div>
+                            <a href="https://sendclean.com" class="project-link" target="_blank">View Project</a>
+                            <div class="project-responsibilities">
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Developed scripts to automate daily dispatch of campaign reports</li>
+                                    <li>Implemented new logger system based on Elasticsearch</li>
+                                    <li>Optimized performance by dividing scripts into multiple components</li>
+                                    <li>Developed seamless dumping process from MongoDB to Elasticsearch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Bonus Round</div>
+                            <div class="project-company">Triofi Technologies</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                Web and Android application for on-demand streaming of Canada's Game Shows, similar to Netflix, with an Admin Panel for content management.
+                            </div>
+                            <a href="https://bonusround.ca/" class="project-link" target="_blank">View Project</a>
+                            <div class="project-responsibilities">
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Developed APIs for video upload/deletion on Bunny CDN</li>
+                                    <li>Implemented APIs to populate users' watched time data</li>
+                                    <li>Modified API response formats for Android app compatibility</li>
+                                    <li>Integrated video iFrame functionality for tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Make Many Robots</div>
+                            <div class="project-company">Triofi Technologies</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                Online DIY-Learn Robotics program for children aged 8-16, providing instructional videos and an admin panel for content configuration.
+                            </div>
+                            <a href="https://courses.makemanyrobots.com/" class="project-link" target="_blank">View Project</a>
+                            <div class="project-responsibilities">
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Developed APIs for complete lifecycle of blogs (CRUD)</li>
+                                    <li>Implemented APIs to efficiently manage courses</li>
+                                    <li>Developed APIs for content upload and streaming via Bunny CDN</li>
+                                    <li>Hosted website on AWS EC2 with MongoDB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">B.E Mechanical</div>
+                                <div class="experience-company">Basaveshwara Engg. College, Bagalkote</div>
+                            </div>
+                            <div class="experience-date">2011 - 2015</div>
+                        </div>
+                        <div class="experience-description">
+                            <p><strong>CGPA:</strong> 8.58</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">PUC</div>
+                                <div class="experience-company">Vijayanagar College, Hospete</div>
+                            </div>
+                            <div class="experience-date">2009 - 2011</div>
+                        </div>
+                        <div class="experience-description">
+                            <p><strong>Percentage:</strong> 70.5%</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">SSLC</div>
+                                <div class="experience-company">Vijayanagar College, Munirabad</div>
+                            </div>
+                            <div class="experience-date">2009</div>
+                        </div>
+                        <div class="experience-description">
+                            <p><strong>Percentage:</strong> 75.68%</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 style="margin-bottom: 1.5rem; color: #333;">Get in Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                <a href="tel:+918050881096" style="color: #667eea; text-decoration: none;">+91 8050881096</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Location:</strong><br>
+                                Marathalli, Bengaluru
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💻</div>
+                            <div>
+                                <strong>GitHub:</strong><br>
+                                <a href="https://github.com/BasavarajaV" target="_blank" style="color: #667eea; text-decoration: none;">github.com/BasavarajaV</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 1.5rem; color: #333;">Send a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Basavaraja. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Simulate form submission
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+            this.reset();
+        });
+
+        // Skill cards click interaction
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const skill = this.textContent;
+                alert(`You clicked on: ${skill}`);
+            });
+        });
+
+        // Add scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect on page load
+        window.addEventListener('load', function() {
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                typeWriter(heroTitle, 'Basavaraja', 150);
+            }
+        });
+    </script>
+</body>
+</html>
